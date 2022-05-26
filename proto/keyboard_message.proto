@@ -13,4 +13,5 @@ message Keyboard {
     }
 
     Layout layout = 1;
+    bool backlit = 2;
 }
