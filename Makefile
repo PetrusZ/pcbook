@@ -1,4 +1,4 @@
-.PHONY: gen clean server client test
+.PHONY: gen clean server client test cert
 
 gen:
 	protoc --proto_path=proto proto/*.proto --go_out=plugins=grpc:pb
@@ -14,3 +14,6 @@ client:
 
 test:
 	go test -cover -race ./...
+
+cert:
+	cd cert; ./gen.sh; cd ..
